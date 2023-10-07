@@ -1,0 +1,18 @@
+#button1{
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+#imgBG{
+    -fx-min-width: 1200px;
+    -fx-min-height: 800px;
+}
+
+#login-main{
+    -fx-background-color: white;
+    -fx-border-radius: 24px;
+}
+
+#title{
+    -fx-font-size: 60px;
+}
