@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectJDBC {
     private String hostName = "localhost:3306";
-    private String dbName = "pbl4";
+    private String dbName = "chat_tcp";
     private String username = "root";
     private String password = "";
     private String connectionURL = "jdbc:mysql://"+hostName+"/"+dbName;

@@ -29,7 +29,7 @@ public class UserDAO implements IUserDAO {
             while (rs.next()){
                 i = rs.getInt(1) + 1;
             }
-            hql.append("insert into user (ip_user, user_name, password, user_fullname) values (" + i + ", '" + user.getUserName() + "', '" + user.getPassword() + "', '" + user.getUserFullname()+"');");
+            hql.append("insert into user (ID_user, name, username, password, email, isLogin) values (" + i + ", '" + user.getUserName() + "', '" + user.getPassword() + "', '" + user.getUserFullname()+"');");
             stm.executeUpdate(hql.toString());
             conn.close();
             return user;
