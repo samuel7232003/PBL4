@@ -24,36 +24,35 @@ public class register {
     @FXML
     private TextField re_pwdtxt;
     @FXML
-    private TextField errortxt;
+    private Label errortxt_;
     @FXML
     protected void onsubmitClick() throws IOException {
-        String fullname ="";
+        String fullname = "";
         String username = "";
         String password = "";
-        boolean i = false;
-        while(!i){
-            i = true;
-            fullname = fullnametxt.getText().trim();
-            if(fullname==""){
-                errortxt.setText("Vui lòng nhập họ và tên!");
-                i = false;
-            }
-            username = usernametxt.getText().trim();
-            if(username==""){
-                errortxt.setText("Vui lòng nhập tên đăng nhập!");
-                i = false;
-            }
-            password = pwd.getText().trim();
-            if(password==""){
-                errortxt.setText("Vui lòng nhập mật khẩu!");
-                i = false;
-            }
-            String re_password = re_pwdtxt.getText().trim();
-            if(password!=re_password){
-                errortxt.setText("Lỗi xác nhận mật khẩu!");
-                i = false;
-            }
-            onsubmitClick();
+        fullname = fullnametxt.getText().trim();
+        if(fullname.equals("")){
+            errortxt_.setText("Vui lòng nhập họ và tên!");
+            return;
+        }
+        fullname = fullnametxt.getText().trim();
+        if(fullname.equals("")){
+            errortxt_.setText("Vui lòng nhập họ và tên!");
+            return;
+        }
+        username = usernametxt.getText().trim();
+        if(username.equals("")){
+            errortxt_.setText("Vui lòng nhập tên đăng nhập!");
+            return;
+        }
+        password = pwd.getText().trim();
+        if(password.equals("")){
+            errortxt_.setText("Vui lòng nhập mật khẩu!");
+            return;
+        }
+        String re_password = re_pwdtxt.getText().trim();
+        if(!password.equals(re_password)) {
+            errortxt_.setText("Lỗi xác nhận mật khẩu!");
             return;
         }
         User user = new User();
