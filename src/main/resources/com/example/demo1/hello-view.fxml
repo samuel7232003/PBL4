@@ -13,13 +13,14 @@
                <Image url="@Background.png" />
             </image>
          </ImageView>
-         <Pane id="login-main" layoutX="155.0" layoutY="436.0" minHeight="343.0" minWidth="871.0" prefHeight="346.0" prefWidth="845.0" style="-fx-background-color: white; -fx-min-height: 250; -fx-min-width: 400; -fx-background-radius: 24px;">
+         <Pane id="login-main" layoutX="155.0" layoutY="422.0" minHeight="343.0" minWidth="871.0" prefHeight="360.0" prefWidth="845.0" style="-fx-background-color: white; -fx-min-height: 250; -fx-min-width: 400; -fx-background-radius: 24px;">
             <children>
-               <TextField id="usernametxt" fx:id="usernametxt" layoutX="251.0" layoutY="96.0" minHeight="70.0" minWidth="501.0" prefHeight="70.0" prefWidth="501.0" promptText="Tên đăng nhập" style="-fx-min-width: 400; -fx-background-radius: 16px; -fx-background-color: #d9d9d9;">
+               <TextField id="fullnametxt" fx:id="fullnametxt" layoutX="251.0" layoutY="14.0" prefHeight="70.0" prefWidth="501.0" promptText="Họ và tên" style="-fx-background-color: #d9d9d9; -fx-background-radius: 16px;">
                   <font>
                      <Font size="30.0" />
-                  </font></TextField>
-               <TextField id="pwd" fx:id="pwd" layoutX="251.0" layoutY="174.0" minHeight="70.0" prefHeight="70.0" prefWidth="501.0" promptText="Mật khẩu" style="-fx-min-width: 400; -fx-background-color: #d9d9d9; -fx-background-radius: 16px;">
+                  </font>
+               </TextField>
+               <TextField id="usernametxt" fx:id="usernametxt" layoutX="251.0" layoutY="96.0" minHeight="70.0" minWidth="501.0" prefHeight="70.0" prefWidth="501.0" promptText="Tên đăng nhập" style="-fx-min-width: 400; -fx-background-radius: 16px; -fx-background-color: #d9d9d9;">
                   <font>
                      <Font size="30.0" />
                   </font></TextField>
@@ -27,21 +28,26 @@
                   <font>
                      <Font size="46.0" />
                   </font></Label>
-               <Button id="submit" layoutX="785.0" layoutY="1.0" mnemonicParsing="false" onAction="#onsubmitClick" prefHeight="346.0" prefWidth="60.0" style="-fx-font-weight: bold; -fx-min-width: 60; -fx-min-height: 300; -fx-border-color: none; -fx-background-color: #F1c40F; -fx-text-fill: white; -fx-background-radius: 0 24 24 0;" text="&gt;" textAlignment="CENTER" textFill="WHITE">
+               <Button id="submit" layoutX="785.0" mnemonicParsing="false" onAction="#onsubmitClick" prefHeight="360.0" prefWidth="60.0" style="-fx-font-weight: bold; -fx-min-width: 60; -fx-min-height: 300; -fx-border-color: none; -fx-background-color: #F1c40F; -fx-text-fill: white; -fx-background-radius: 0 24 24 0;" text="&gt;" textAlignment="CENTER" textFill="WHITE">
                   <font>
                      <Font name="System Bold" size="19.0" />
                   </font>
                </Button>
-               <TextField id="fullnametxt" fx:id="fullnametxt" layoutX="251.0" layoutY="14.0" prefHeight="70.0" prefWidth="501.0" promptText="Họ và tên" style="-fx-background-color: #d9d9d9; -fx-background-radius: 16px;">
+               <Label id="errortxt" fx:id="errortxt" layoutX="255.0" layoutY="335.0" textFill="RED">
+                  <font>
+                     <Font name="System Italic" size="14.0" />
+                  </font>
+               </Label>
+               <PasswordField id="pwd" fx:id="pwd" layoutX="251.0" layoutY="174.0" prefHeight="70.0" prefWidth="500.0" promptText="Mật khẩu" style="-fx-background-color: #d9d9d9; -fx-background-radius: 16px;">
                   <font>
                      <Font size="30.0" />
                   </font>
-               </TextField>
-               <TextField layoutX="251.0" layoutY="254.0" prefHeight="70.0" prefWidth="501.0" promptText="Xác nhận mật khẩu" style="-fx-background-color: #d9d9d9; -fx-background-radius: 16;">
+               </PasswordField>
+               <PasswordField id="re_pwdtxt" fx:id="re_pwdtxt" layoutX="251.0" layoutY="250.0" prefHeight="70.0" prefWidth="500.0" promptText="Xác nhận mật khẩu" style="-fx-background-color: #d9d9d9; -fx-background-radius: 16px;">
                   <font>
                      <Font size="30.0" />
                   </font>
-               </TextField>
+               </PasswordField>
             </children>
          </Pane>
          <Label id="hello" fx:id="hello" layoutX="188.0" layoutY="139.0" prefHeight="189.0" prefWidth="608.0" text="Bắt đầu cuộc trò chuyện của bạn..." textFill="WHITE" wrapText="true">

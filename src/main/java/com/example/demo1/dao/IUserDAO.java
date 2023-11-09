@@ -4,4 +4,5 @@ import com.example.demo1.model.User;
 
 public interface IUserDAO {
     public User createUser(User user);
+//    public int login(User user);
 }

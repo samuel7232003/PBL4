@@ -22,11 +22,40 @@ public class register {
     @FXML
     private TextField pwd;
     @FXML
+    private TextField re_pwdtxt;
+    @FXML
+    private TextField errortxt;
+    @FXML
     protected void onsubmitClick() throws IOException {
-        hello.setText("Nhan duoc ne");
-        String username = usernametxt.getText();
-        String password = pwd.getText();
-        String fullname = fullnametxt.getText();
+        String fullname ="";
+        String username = "";
+        String password = "";
+        boolean i = false;
+        while(!i){
+            i = true;
+            fullname = fullnametxt.getText().trim();
+            if(fullname==""){
+                errortxt.setText("Vui lòng nhập họ và tên!");
+                i = false;
+            }
+            username = usernametxt.getText().trim();
+            if(username==""){
+                errortxt.setText("Vui lòng nhập tên đăng nhập!");
+                i = false;
+            }
+            password = pwd.getText().trim();
+            if(password==""){
+                errortxt.setText("Vui lòng nhập mật khẩu!");
+                i = false;
+            }
+            String re_password = re_pwdtxt.getText().trim();
+            if(password!=re_password){
+                errortxt.setText("Lỗi xác nhận mật khẩu!");
+                i = false;
+            }
+            onsubmitClick();
+            return;
+        }
         User user = new User();
         user = UserService.getInstance().register(username, password, fullname);
         Stage stage = new Stage();

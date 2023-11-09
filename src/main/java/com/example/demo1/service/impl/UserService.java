@@ -22,4 +22,13 @@ public class UserService implements IUserService {
 
         return UserDAO.getInstance().createUser(user);
     }
+
+//    @Override
+//    public int login(String userName, String password) {
+//        User user = new User();
+//        user.setUserName(userName);
+//        user.setPassword(password);
+//
+//        return UserDAO.getInstance().login(user);
+//    }
 }
